@@ -6,6 +6,8 @@ const dotenv = require("dotenv");
 const helmet = require("helmet");
 const morgan = require("morgan");
 
+const userRoute = require("./routes/users");
+
 
 dotenv.config();
 
@@ -30,7 +32,7 @@ app.get("/", (req, res)=>{
 
 })
 
-
+app.use("/api/users", userRoute);
 
 
 
